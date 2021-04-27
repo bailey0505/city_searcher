@@ -14,8 +14,7 @@ struct mapView: View {
             span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
         )
     var body: some View {
-        //Map(coordinateRegion: $coordinates)
-        Text("Hello")
+        Map(coordinateRegion: $coordinates)
     }
 }
 

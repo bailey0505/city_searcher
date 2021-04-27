@@ -15,10 +15,10 @@
 		423F443A26382A7E00405496 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423F443926382A7E00405496 /* Preview Assets.xcassets */; };
 		423F444526382A7E00405496 /* city_searcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F444426382A7E00405496 /* city_searcherTests.swift */; };
 		423F445026382A7E00405496 /* city_searcherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423F444F26382A7E00405496 /* city_searcherUITests.swift */; };
-		423F446226382BC200405496 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 423F446126382BC200405496 /* cities.json */; };
 		42948A0D26382E210048121C /* mapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42948A0C26382E210048121C /* mapView.swift */; };
 		42948A1626382FCD0048121C /* city_data_deoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42948A1526382FCD0048121C /* city_data_deoder.swift */; };
 		42948A1B263830110048121C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42948A1A263830110048121C /* City.swift */; };
+		429698AF26387060005091B2 /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 429698AE26387060005091B2 /* cities.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		423F444B26382A7E00405496 /* city_searcherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = city_searcherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423F444F26382A7E00405496 /* city_searcherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = city_searcherUITests.swift; sourceTree = "<group>"; };
 		423F445126382A7E00405496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		423F446126382BC200405496 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		42948A0C26382E210048121C /* mapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapView.swift; sourceTree = "<group>"; };
 		42948A1526382FCD0048121C /* city_data_deoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = city_data_deoder.swift; sourceTree = "<group>"; };
 		42948A1A263830110048121C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		429698AE26387060005091B2 /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +107,9 @@
 		423F443126382A7B00405496 /* city_searcher */ = {
 			isa = PBXGroup;
 			children = (
+				429698AD26387052005091B2 /* resources */,
 				42948A1426382E290048121C /* models */,
 				42948A0B26382E0B0048121C /* views */,
-				423F446026382BAD00405496 /* resources */,
 				423F443226382A7B00405496 /* city_searcherApp.swift */,
 				423F443426382A7B00405496 /* ContentView.swift */,
 				423F443626382A7E00405496 /* Assets.xcassets */,
@@ -145,14 +145,6 @@
 			path = city_searcherUITests;
 			sourceTree = "<group>";
 		};
-		423F446026382BAD00405496 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				423F446126382BC200405496 /* cities.json */,
-			);
-			path = resources;
-			sourceTree = "<group>";
-		};
 		42948A0B26382E0B0048121C /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +162,14 @@
 				42948A1A263830110048121C /* City.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		429698AD26387052005091B2 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				429698AE26387060005091B2 /* cities.json */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423F446226382BC200405496 /* cities.json in Resources */,
+				429698AF26387060005091B2 /* cities.json in Resources */,
 				423F443A26382A7E00405496 /* Preview Assets.xcassets in Resources */,
 				423F443726382A7E00405496 /* Assets.xcassets in Resources */,
 			);

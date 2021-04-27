@@ -6,18 +6,50 @@
 //
 
 import SwiftUI
+import MapKit
+import CoreLocation
 
 struct cityDetails: View {
+    @State private var region = MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    
     var city: City
+
+    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
+    }
+    
+    var coordinates: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: city.lat,
+            longitude: city.lng)
+    }
+    
     var body: some View {
-        Text(city.name)
+        ScrollView {
+            Map(coordinateRegion: $region)
+            .onAppear {
+                setRegion(coordinates)
+            }
+            .ignoresSafeArea(edges: .top)
+            .frame(height: 300)
+
+            
+            Text(city.name)
+            Text(city.lat)
+            Text(city.lng)
+        }
         
     }
 }
 
 struct cityDetails_Previews: PreviewProvider {
     static var previews: some View {
-       // cityDetails(city: City[0])
         cityDetails(city: cities[0])
     }
 }
