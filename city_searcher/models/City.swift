@@ -12,8 +12,8 @@ import CoreLocation
 struct City: Hashable, Codable, Identifiable {
     var name: String
     var ascii: String
-    var lat: String
-    var lng: String
+    var lat: Double
+    var lng: Double
     var country: String
     var iso2: String
     var iso3: String
@@ -21,5 +21,12 @@ struct City: Hashable, Codable, Identifiable {
     var capital: String
     var population: String
     var id: String
-
+    
+    
+    var locationCoordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(
+            latitude: lat,
+            longitude: lng)
+    }
+    
 }

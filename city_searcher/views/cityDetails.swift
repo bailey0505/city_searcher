@@ -9,6 +9,7 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
+
 struct cityDetails: View {
     @State private var region = MKCoordinateRegion(
             center: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868),
@@ -24,25 +25,19 @@ struct cityDetails: View {
         )
     }
     
-    var coordinates: CLLocationCoordinate2D {
-        CLLocationCoordinate2D(
-            latitude: city.lat,
-            longitude: city.lng)
-    }
-    
     var body: some View {
-        ScrollView {
-            Map(coordinateRegion: $region)
+        Map(coordinateRegion: $region)
             .onAppear {
-                setRegion(coordinates)
+                setRegion(city.locationCoordinate)
             }
             .ignoresSafeArea(edges: .top)
             .frame(height: 300)
-
             
-            Text(city.name)
-            Text(city.lat)
-            Text(city.lng)
+        VStack{
+            Text("Name: \(city.name)")
+            Text("Capital: \(city.capital)")
+            Text("Country: \(city.country)")
+            Text("Population: \(city.population)")
         }
         
     }
